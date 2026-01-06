@@ -1,0 +1,70 @@
+[
+  {
+    "ContainingType": "MapDistanceAPI.Controllers.MapController",
+    "Method": "GetMap",
+    "RelativePath": "api/map/GetMap",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MapDistanceAPI.Controllers.MapController",
+    "Method": "SetMap",
+    "RelativePath": "api/map/SetMap",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "graph",
+        "Type": "MapDistanceAPI.Models.GraphDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MapDistanceAPI.Controllers.MapController",
+    "Method": "ShortestDistance",
+    "RelativePath": "api/map/ShortestDistance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "from",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "to",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MapDistanceAPI.Controllers.MapController",
+    "Method": "ShortestRoute",
+    "RelativePath": "api/map/ShortestRoute",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "from",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "to",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
