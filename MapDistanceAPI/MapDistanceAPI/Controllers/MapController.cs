@@ -50,7 +50,7 @@ public sealed class MapController : ControllerBase
         if (!_pathService.TryGetShortestPath(map, from, to, out var path, out _, out var error))
             return BadRequest(error);
 
-        // Output: Path string like "GACE" :contentReference[oaicite:3]{index=3}
+        // Output: Path string like "GACE" 
         var pathString = string.Concat(path);
         return Ok(pathString);
     }
@@ -66,7 +66,7 @@ public sealed class MapController : ControllerBase
         if (!_pathService.TryGetShortestPath(map, from, to, out _, out var distance, out var error))
             return BadRequest(error);
 
-        // Output: int like 933 :contentReference[oaicite:4]{index=4}
+        // Output: int like 933 
         return Ok(distance);
     }
 }

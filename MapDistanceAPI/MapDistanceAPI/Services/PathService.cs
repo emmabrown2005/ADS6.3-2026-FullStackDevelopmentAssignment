@@ -7,6 +7,9 @@ namespace MapDistanceAPI.Services
         /// <summary>
         /// Returns the shortest path as a list of node IDs using Dijkstra.
         /// Treats edges as bi-directional as required by the brief.
+        /// Dijekstra is a shortest path algorithm used to find the minimum 
+        /// distance from a single source node to all other nodes in a 
+        /// weighted graph with non-negative edge weights.
         /// </summary>
         public bool TryGetShortestPath(GraphDto graph, string from, string to, out List<string> path, out int distance, out string error)
         {

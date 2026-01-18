@@ -12,7 +12,7 @@
 
         public async Task InvokeAsync(HttpContext context)
         {
-            // Only protect /api/map/* endpoints (optional but tidy)
+            // Only protect /api/map/* endpoints 
             if (context.Request.Path.StartsWithSegments("/api/map", StringComparison.OrdinalIgnoreCase))
             {
                 if (!context.Request.Headers.TryGetValue(HeaderName, out var providedKey) ||
@@ -25,7 +25,7 @@
 
                 var key = providedKey.ToString().Trim();
 
-                // SetMap requires FS_ReadWrite (exact requirement) :contentReference[oaicite:1]{index=1}
+                // SetMap requires FS_ReadWrite 
                 var isSetMap = context.Request.Path.Value?.EndsWith("/SetMap", StringComparison.OrdinalIgnoreCase) == true;
 
                 if (isSetMap)
@@ -39,7 +39,7 @@
                 }
                 else
                 {
-                    // All other endpoints require FS_Read (exact requirement) :contentReference[oaicite:2]{index=2}
+                    // All other endpoints require FS_Read 
                     if (!string.Equals(key, ReadKey, StringComparison.Ordinal))
                     {
                         context.Response.StatusCode = StatusCodes.Status401Unauthorized;
